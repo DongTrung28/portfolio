@@ -215,47 +215,93 @@
       font-weight: 500;
     }
 
-    /* Projects */
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.4rem;
+    /* Projects — pub-row style */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
-      gap: 1.2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .pub-row {
+      display: flex;
+      gap: 0;
       align-items: flex-start;
-      transition: border-color 0.2s;
     }
-    .project-card:hover { border-color: var(--accent); }
-    .project-icon {
-      width: 46px;
-      height: 46px;
+
+    /* Thumbnail column */
+    .pub-thumb {
+      flex: 0 0 30%;
+      position: relative;
+      padding-right: 1rem;
+    }
+    .pub-thumb img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
       border-radius: 8px;
-      background: rgba(91,110,245,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.3rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      display: block;
     }
-    .project-body h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
+    .pub-thumb .pub-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.18em 0.55em;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      white-space: nowrap;
+    }
+
+    /* Content column */
+    .pub-body {
+      flex: 1;
+      min-width: 0;
+      padding-left: 0.5rem;
+    }
+    .pub-body .pub-title {
+      font-size: 0.92rem;
+      font-weight: 700;
       color: var(--text);
+      margin-bottom: 0.25rem;
+      line-height: 1.45;
     }
-    .project-body p {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 0.7rem;
-    }
-    .project-body a {
-      color: var(--link);
-      text-decoration: none;
+    .pub-body .pub-authors {
       font-size: 0.82rem;
-      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
     }
-    .project-body a:hover { text-decoration: underline; }
+    .pub-body .pub-venue {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.55rem;
+    }
+    .pub-body .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .pub-body .pub-links a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text);
+      border: 1px solid var(--text);
+      border-radius: 4px;
+      padding: 0.1rem 0.55rem;
+      text-decoration: none;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .pub-body .pub-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
 
     /* Education */
     .edu-item {
@@ -361,14 +407,29 @@
     <!-- ── Projects ── -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-card">
-        <div class="project-icon">🔬</div>
-        <div class="project-body">
-          <h3>PFS</h3>
-          <p>Short description of the PFS project — what problem it solves, methods used, or key results.</p>
-          <a href="projects/pfs.html">Learn more →</a>
-        </div>
-      </div>
+      <ol class="pub-list">
+
+        <li>
+          <div class="pub-row">
+            <div class="pub-thumb">
+              <img src="assets/img/pfs_thumb.jpg" alt="PFS thumbnail" onerror="this.style.background='#e8eaf6';this.style.height='130px';this.removeAttribute('src')" />
+              <!-- <span class="pub-badge">Venue / Year</span> -->
+            </div>
+            <div class="pub-body">
+              <div class="pub-title">PFS</div>
+              <div class="pub-authors">Trung Tien Dong</div>
+              <div class="pub-venue">University of South Florida</div>
+              <div class="pub-links">
+                <a href="projects/pfs.html">Page</a>
+                <!-- <a href="#">Paper</a> -->
+                <!-- <a href="#">Code</a> -->
+                <!-- <a href="#">Video</a> -->
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ol>
     </section>
 
     <!-- ── Education ── -->
