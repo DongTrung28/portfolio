@@ -12,14 +12,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:      #0f1117;
-      --surface: #1a1d27;
-      --border:  #2a2d3e;
-      --accent:  #7c8cff;
-      --accent2: #a78bfa;
-      --text:    #ffffff;
-      --muted:   #8892a4;
-      --link:    #93c5fd;
+      --bg:      #f0f2f5;
+      --surface: #ffffff;
+      --border:  #dde1e9;
+      --accent:  #5b6ef5;
+      --accent2: #7c3aed;
+      --text:    #111827;
+      --muted:   #6b7280;
+      --link:    #2563eb;
     }
 
     html { scroll-behavior: smooth; }
@@ -73,9 +73,9 @@
       display: block;
       border: 2px solid var(--accent);
       box-shadow:
-        0 0 10px rgba(124,140,255,0.65),
-        0 0 28px rgba(124,140,255,0.35),
-        0 0 52px rgba(167,139,250,0.2);
+        0 0 10px rgba(91,110,245,0.5),
+        0 0 28px rgba(91,110,245,0.25),
+        0 0 52px rgba(124,58,237,0.15);
     }
 
     .profile-name {
@@ -133,7 +133,7 @@
       transition: background 0.15s, color 0.15s;
     }
     .profile-nav a i { font-size: 0.72rem; color: var(--accent); width: 14px; text-align: center; }
-    .profile-nav a:hover { background: rgba(124,140,255,0.1); color: var(--text); }
+    .profile-nav a:hover { background: rgba(91,110,245,0.08); color: var(--text); }
 
     /* Social buttons */
     .social-links {
@@ -148,7 +148,7 @@
       gap: 0.45rem;
       padding: 0.4rem 0.6rem;
       border-radius: 6px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(0,0,0,0.02);
       border: 1px solid var(--border);
       color: var(--muted);
       text-decoration: none;
@@ -160,7 +160,7 @@
     .social-links a:hover {
       border-color: var(--accent);
       color: var(--text);
-      background: rgba(124,140,255,0.08);
+      background: rgba(91,110,245,0.07);
     }
 
     /* ════════════════════════════
@@ -206,8 +206,8 @@
     .tag {
       padding: 0.3rem 0.8rem;
       border-radius: 20px;
-      background: rgba(124,140,255,0.1);
-      border: 1px solid rgba(124,140,255,0.25);
+      background: rgba(91,110,245,0.08);
+      border: 1px solid rgba(91,110,245,0.2);
       color: var(--accent2);
       font-size: 0.82rem;
       font-weight: 500;
@@ -229,7 +229,7 @@
       width: 46px;
       height: 46px;
       border-radius: 8px;
-      background: rgba(124,140,255,0.12);
+      background: rgba(91,110,245,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -269,7 +269,7 @@
       background: var(--accent);
       flex-shrink: 0;
       margin-top: 0.55rem;
-      box-shadow: 0 0 6px rgba(124,140,255,0.6);
+      box-shadow: 0 0 6px rgba(91,110,245,0.5);
     }
     .edu-body .degree {
       font-size: 0.9rem;
